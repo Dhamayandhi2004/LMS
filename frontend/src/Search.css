@@ -62,7 +62,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  justify-content: flex-start; /* Align items to the start of each row */
   margin-top: 20px;
 }
 
