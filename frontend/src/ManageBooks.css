@@ -43,18 +43,19 @@ html, body {
   color: #ffcc00;
 }
 
-/* Manage Books Section */
 .manage-books {
   display: flex;
   flex-direction: column;
   padding: 70px 20px 20px; /* Adjust padding for fixed navbar */
   width: 100vw; /* Full viewport width */
   min-height: calc(100vh - 70px); /* Ensure content takes up full height */
-  overflow: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
   position: fixed;
   left: 0;
   top: 0;
 }
+
 
 /* Heading */
 h1 {
