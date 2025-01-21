@@ -51,6 +51,7 @@ html, body {
   width: 100vw; /* Full viewport width */
   min-height: calc(100vh - 70px); /* Ensure content takes up full height */
   overflow: auto; /* Allow scrolling if content overflows */
+  position: fixed;
 }
 
 /* Heading */
