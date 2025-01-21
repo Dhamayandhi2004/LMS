@@ -12,6 +12,7 @@ h2 {
 .orders-list {
   list-style-type: none;
   padding: 0;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
   display: flex;
   flex-wrap: wrap; /* Allows the items to wrap to the next row if needed */
   justify-content: space-between; /* Space out the items */
