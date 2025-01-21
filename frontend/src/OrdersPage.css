@@ -8,20 +8,16 @@ h2 {
   margin-bottom: 20px;
 }
 
-.order-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 10px; /* Spacing between items */
-  list-style: none; /* Remove default numbering style */
+/* Container for the order items */
+.orders-list {
+  list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  justify-content: flex-start; /* Align items to the start of each row */
+  gap: 20px; /* Space between items */
 }
-.order-list li {
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-}
+
 .order-item {
   background: #f9f9f9;
   border: 1px solid #ddd;
