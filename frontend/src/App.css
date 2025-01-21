@@ -269,60 +269,96 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: #ffffff;
 }
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .content {
+    max-width: 80%;
+  }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
+  .form-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 90%;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-links {
+    justify-content: center; /* Center the links */
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between links */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile-Specific Styles */
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .website-name {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px;
+  }
+
+  .content {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .form-container {
+    padding: 10px;
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .search-book-form-container {
+    width: 95%;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px; /* Adjust font size for small screens */
+    margin: 10px auto;
+  }
+
   th, td {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 6px;
   }
 
   th {
-    display: none; /* Hide header on small screens */
-  }
-
-  tr {
-    margin-bottom: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Smaller table header font size */
   }
 
   td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
+    font-size: 12px;
   }
 
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    width: calc(50% - 20px);
-    padding-left: 10px;
-    text-align: left;
-    font-weight: bold;
-    color: #7f8c8d;
+  button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 10px;
   }
-}
 
-/* Success Message */
-.success-message {
-  color: #27ae60;
-  text-align: center;
-  font-weight: bold;
-  margin: 10px 0;
-}
-/* Add this CSS to your App.css or any other relevant CSS file */
-.scroll-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-out;
-}
-
-.scroll-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+  .success-message {
+    font-size: 14px; /* Adjust success message size */
+  }
 }
