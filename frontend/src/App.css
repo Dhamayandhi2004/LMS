@@ -103,7 +103,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('https://img.freepik.com/free-photo/living-room-interior-design-with-bookcase_23-2148848678.jpg?semt=ais_incoming') 
+  background: url('https://img.freepik.com/premium-photo/home-office-desk-setting-with-vase-spring-flowers-books_641503-12983.jpg') 
     no-repeat center center fixed;
   background-size: cover;
 }
@@ -193,7 +193,7 @@ button:hover {
 
 /* Search Page */
 .search-page {
-  background-image: url('https://tse1.mm.bing.net/th?id=OIP.Y5X_DxWRh6DsLZBud6XPbgHaEK&pid=Api&P=0&h=180');
+  background-image: url('https://img.freepik.com/premium-photo/home-office-desk-setting-with-vase-spring-flowers-books_641503-12983.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
