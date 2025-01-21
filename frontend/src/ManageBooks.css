@@ -50,8 +50,10 @@ html, body {
   padding: 70px 20px 20px; /* Adjust padding for fixed navbar */
   width: 100vw; /* Full viewport width */
   min-height: calc(100vh - 70px); /* Ensure content takes up full height */
-  overflow: auto; /* Allow scrolling if content overflows */
+  overflow: hidden; /* Prevent horizontal scrolling */
   position: fixed;
+  left: 0;
+  top: 0;
 }
 
 /* Heading */
