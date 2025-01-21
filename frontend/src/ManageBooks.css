@@ -51,7 +51,6 @@ html, body {
   min-height: calc(100vh - 70px); /* Ensure content takes up full height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto; /* Allow vertical scrolling */
-  position: fixed;
   left: 0;
   top: 0;
 }
