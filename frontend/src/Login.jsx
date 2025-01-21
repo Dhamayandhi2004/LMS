@@ -33,7 +33,7 @@ const Login = () => {
       if (error.response?.status === 404) {
         alert('Email is not registered.');
       } else if (error.response?.status === 401) {
-        alert('Invalid password.');
+        alert('Invalid Credentials.');
       } else {
         alert('Login failed. Please try again.');
       }
