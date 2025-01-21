@@ -1,0 +1,126 @@
+/* src/home.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    height: 100%; /* Ensure the body takes full height */
+    overflow-x: hidden;
+  }
+  
+  /* Home Container */
+  .home-container {
+    display: flex;
+    padding: 100px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 70px; /* Adjust the navbar height */
+  }
+  
+  .website-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .website-name::before {
+    content: "🏛️";
+    margin-right: 8px;
+    font-size: 30px;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555;
+  }
+  /* Content Section */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px; /* Account for navbar height */
+  text-align: center;
+  color: #333;
+  flex-grow: 1; /* Allow content to grow and take remaining space */
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333;
+  max-width: 90%; /* Ensure title does not exceed container width */
+  word-wrap: break-word;
+}
+
+.con {
+  font-size: 18px;
+  max-width: 700px; /* Limit content width */
+  width: 90%; /* Responsive width */
+  line-height: 1.6;
+  color: #555;
+  margin: 0 auto;
+  word-wrap: break-word; /* Break long words */
+  padding: 0 20px; /* Add padding for smaller screens */
+  text-align: justify;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .con {
+    font-size: 16px;
+    max-width: 90%; /* Shrink content width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .con {
+    font-size: 14px;
+    max-width: 90%;
+    padding: 0 10px;
+  }
+}

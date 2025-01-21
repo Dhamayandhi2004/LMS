@@ -1,0 +1,13 @@
+.logout-icon-div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4dd8ff; /* Customize the icon color */
+    font-size: 24px; /* Adjust the icon size */
+  }
+  
+  .logout-icon-div:hover {
+    color: #ccb400; /* Change color on hover */
+  }
+  

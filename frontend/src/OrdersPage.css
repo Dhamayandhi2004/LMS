@@ -1,0 +1,57 @@
+.orders-page-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container for the order items */
+.orders-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap to the next row if needed */
+  justify-content: space-between; /* Space out the items */
+}
+
+.order-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Adjust width to display three items per row */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  display: flex;
+  flex-direction: column; /* Keeps the content stacked inside each order item */
+}
+
+.order-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.order-item p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.order-item p strong {
+  font-weight: bold;
+}
+
+/* For smaller screens (optional) */
+@media (max-width: 768px) {
+  .order-item {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-item {
+    width: 100%; /* One item per row on very small screens */
+  }
+}

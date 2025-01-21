@@ -1,0 +1,109 @@
+/* styles/UserDashBoard.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    background: url('https://media.istockphoto.com/id/2060984408/photo/stack-of-colorful-books-education-background-back-to-school-book-hardback-colorful-books-on.webp?b=1&s=612x612&w=0&k=20&c=X0W0G1UtRZPpDrsxdjg52sAgCbEczndY9DQqCWke-rg=');
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 70px;
+  }
+  
+  .website-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .website-name::before {
+    content: "🏛️";
+    margin-right: 8px;
+    font-size: 30px;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    text-align: center;
+    color: #333;
+    flex-grow: 1;
+  }
+  
+  .content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .description {
+    font-size: 18px;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 30px;
+    }
+  
+    .description {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    .nav-links a {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
