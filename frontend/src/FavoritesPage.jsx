@@ -23,7 +23,7 @@ const FavoritesPage = () => {
   useEffect(() => {
     if (userEmail) {
       axios
-        .get(`http://localhost:5000/favorites?email=${userEmail}`)
+        .get(`https://lms-4n6b.onrender.com/favorites?email=${userEmail}`)
         .then((response) => {
           if (Array.isArray(response.data)) {
             setFavorites(response.data);
@@ -66,7 +66,7 @@ const FavoritesPage = () => {
     };
 
     axios
-      .post("http://localhost:5000/orders", payload)
+      .post("https://lms-4n6b.onrender.com/orders", payload)
       .then(() => {
         alert("Order placed successfully!");
         setShowModal(false);

@@ -18,7 +18,7 @@ const ManageBooks = () => {
   const[price,setPrice]=useState('');
   const navigate=useNavigate();
 
-  const apiUrl = 'http://localhost:5000/books';
+  const apiUrl = 'https://lms-4n6b.onrender.com/books';
 
   useEffect(() => {
     axios.get(apiUrl)

@@ -34,7 +34,7 @@ const CartPage = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/cart?email=${userEmail}`
+          `https://lms-4n6b.onrender.com/cart?email=${userEmail}`
         );
         console.log("Cart items fetched:", response.data);
         setCartItems(response.data); // Set the cart items to state
@@ -59,7 +59,7 @@ const CartPage = () => {
     }
 
     try {
-      const response = await axios.delete("http://localhost:5000/del", {
+      const response = await axios.delete("https://lms-4n6b.onrender.com/del", {
         data: { bookName, email: userEmail }, // Send the bookName and userEmail in the request body
       });
 
@@ -109,7 +109,7 @@ const CartPage = () => {
     console.log("Submitting order with payload:", payload); // Verify payload
 
     axios
-      .post("http://localhost:5000/orders", payload)
+      .post("https://lms-4n6b.onrender.com/orders", payload)
       .then(() => {
         alert("Order placed successfully!");
         setShowModal(false);

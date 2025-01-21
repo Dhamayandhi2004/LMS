@@ -22,7 +22,7 @@ const OrdersPage = () => {
 
     // Fetch the orders from the backend for admin
     axios
-      .get('http://localhost:5000/getAllOrders') // Admin route
+      .get('https://lms-4n6b.onrender.com/getAllOrders') // Admin route
       .then((response) => {
         setOrders(response.data); // Update orders state with the response data
         setIsLoading(false); // Indicate loading has completed

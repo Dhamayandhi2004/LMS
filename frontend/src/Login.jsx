@@ -15,7 +15,7 @@ const Login = () => {
   const handleEmailLogin = async () => {
     try {
       // API call to the backend
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://lms-4n6b.onrender.com/api/login', {
         email,
         password,
       });

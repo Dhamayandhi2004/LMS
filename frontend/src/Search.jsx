@@ -12,7 +12,7 @@ const Search = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [isListening, setIsListening] = useState(false);
   const navigate=useNavigate();
-  const apiUrl = "http://localhost:5000/books";
+  const apiUrl = "https://lms-4n6b.onrender.com/books";
 
   useEffect(() => {
     axios

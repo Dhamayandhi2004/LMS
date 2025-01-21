@@ -18,7 +18,7 @@ const SearchBooks = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/books")
+      .get("https://lms-4n6b.onrender.com/books")
       .then((response) => {
         setBooks(response.data);
         setLoading(false);
@@ -107,7 +107,7 @@ const SearchBooks = () => {
       return;
     }
     axios
-      .post("http://localhost:5000/favorites", { email: userEmail, bookId })
+      .post("https://lms-4n6b.onrender.com/favorites", { email: userEmail, bookId })
       .then((response) => {
         alert(response.data.message || "Book added to favorites!");
       })
@@ -132,7 +132,7 @@ const SearchBooks = () => {
     };
 
     axios
-      .post("http://localhost:5000/cart", payload)
+      .post("https://lms-4n6b.onrender.com/cart", payload)
       .then((response) => {
         alert(response.data.message || "Item added to cart successfully!");
       })
