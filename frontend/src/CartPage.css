@@ -15,6 +15,8 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .modal-content {
@@ -79,3 +81,98 @@ body.modal-open {
     background-color: gray;
     cursor: not-allowed;
   }
+
+  
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .content {
+    max-width: 80%;
+  }
+
+  .form-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 90%;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-links {
+    justify-content: center; /* Center the links */
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between links */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile-Specific Styles */
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .website-name {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px;
+  }
+
+  .content {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .form-container {
+    padding: 10px;
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .search-book-form-container {
+    width: 95%;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px; /* Adjust font size for small screens */
+    margin: 10px auto;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  th {
+    font-size: 14px; /* Smaller table header font size */
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 10px;
+  }
+
+  .success-message {
+    font-size: 14px; /* Adjust success message size */
+  }
+}
