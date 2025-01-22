@@ -1,196 +1,134 @@
-/* src/home.css */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow-y: auto;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    height: 100%; /* Ensure the body takes full height */
-    overflow-x: hidden;
-  }
-  
-  /* Home Container */
-  .home-container {
-    display: flex;
-    padding: 100px;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    height: 70px; /* Adjust the navbar height */
-  }
-  
-  .website-name {
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .website-name::before {
-    content: "🏛️";
-    margin-right: 8px;
-    font-size: 30px;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    margin-left: 15px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    background-color: #555;
-  }
-  /* Content Section */
-.content {
+.home-container {
+  min-height: 100vh;
+  background: url('https://img.freepik.com/premium-photo/home-office-desk-setting-with-vase-spring-flowers-books_641503-12983.jpg')
+    no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 60px; /* Adjust padding to prevent content being hidden behind navbar */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 100px 20px; /* Account for navbar height */
+}
+
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Website Name */
+.website-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fcfcfc;
+}
+
+.website-name::before {
+  content: "🏛️";
+  margin-right: 8px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+
+.nav-links a:hover {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+/* Content Section */
+.content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #333;
-  flex-grow: 1; /* Allow content to grow and take remaining space */
-  width: 100%; /* Ensure it spans the full width */
-  box-sizing: border-box; /* Include padding in width calculations */
+  max-width: 90%;
+  margin: 100px auto 20px;
 }
 
 .content h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #333;
-  max-width: 90%; /* Ensure title does not exceed container width */
-  word-wrap: break-word;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-.con {
-  font-size: 18px;
-  max-width: 700px; /* Limit content width */
-  width: 90%; /* Responsive width */
+.content p {
+  font-size: 16px;
   line-height: 1.6;
-  color: #555;
-  margin: 0 auto;
-  word-wrap: break-word; /* Break long words */
-  padding: 0 20px; /* Add padding for smaller screens */
-  text-align: justify;
-
+  color: #333;
 }
 
 /* Responsive Media Queries */
-@media (max-width: 1200px) {
-  .content {
-    max-width: 80%;
-  }
-
-  .form-container {
-    width: 75%;
-  }
-}
-
 @media (max-width: 768px) {
-  .content {
-    max-width: 90%;
-  }
-
-  .form-container {
-    width: 90%;
-  }
-
   .navbar {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-links {
-    justify-content: center; /* Center the links */
+    justify-content: center;
   }
 
-  .nav-links a {
-    margin-left: 0;
-    margin-bottom: 10px; /* Space between links */
+  .content {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  /* Mobile-Specific Styles */
-  .navbar {
-    flex-direction: column; /* Stack navbar items vertically */
-    align-items: center;
-    padding: 10px;
-  }
-
   .website-name {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 18px;
   }
 
   .nav-links a {
-    font-size: 14px; /* Smaller font size */
-    padding: 5px 10px;
-  }
-
-  .content {
-    padding: 15px;
-    margin: 10px auto;
-  }
-
-  .form-container {
-    padding: 10px;
-    width: 95%;
-    margin: 15px auto;
-  }
-
-  .search-book-form-container {
-    width: 95%;
+    font-size: 12px;
     padding: 8px;
   }
 
-  table {
-    font-size: 12px; /* Adjust font size for small screens */
-    margin: 10px auto;
-  }
-
-  th, td {
-    padding: 6px;
-  }
-
-  th {
-    font-size: 14px; /* Smaller table header font size */
-  }
-
-  td {
-    font-size: 12px;
-  }
-
-  button {
-    font-size: 14px; /* Adjust button font size */
+  .content {
     padding: 10px;
+    margin: 80px auto;
   }
 
-  .success-message {
-    font-size: 14px; /* Adjust success message size */
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 12px;
   }
 }

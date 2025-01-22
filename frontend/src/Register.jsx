@@ -40,7 +40,7 @@ const Register = () => {
     } catch (error) {
       console.error('Registration Error:', error);
       alert(
-        error.response?.data?.message || 'An error occurred during registration'
+        error.response?.data?.message || 'This email is already Registered..'
       );
     }
   };
