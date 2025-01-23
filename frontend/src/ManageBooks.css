@@ -4,18 +4,17 @@ html, body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
-  overflow: auto; /* Allow scrolling when zooming out */
+  overflow: auto;
 }
 
 /* Home Container */
 .home-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Allow content to grow beyond the viewport */
+  min-height: 100vh;
   background-color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
-
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Navbar */
@@ -49,14 +48,9 @@ html, body {
 .manage-books {
   display: flex;
   flex-direction: column;
-  padding: 70px 20px 20px; /* Adjust padding for fixed navbar */
-  width: 100vw; /* Full viewport width */
-  min-height: calc(100vh - 70px); /* Ensure content takes up full height */
- 
-  left: 0;
-  top: 0;
+  padding: 80px 20px 20px; /* Adjust padding for fixed navbar */
+  width: 100%;
 }
-
 
 /* Heading */
 h1 {
@@ -72,6 +66,7 @@ h1 {
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .form-container input {
@@ -110,7 +105,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  overflow: auto; /* Allow scrolling if content overflows */
+  overflow-y: auto;
 }
 
 .books-list h2 {
@@ -123,14 +118,14 @@ h1 {
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 40px;
-  width: 100%; /* Full width */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
 }
 
 .books-list li {
   background-color: #fff;
-  padding: 35px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -143,13 +138,13 @@ h1 {
 }
 
 .books-list h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .books-list p {
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
 }
 
@@ -173,4 +168,16 @@ h1 {
 
 .books-list button:hover {
   background-color: #ffcc00;
+}
+
+/* Logout Icon Styling */
+.logout-icon-div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.logout-icon-div:hover {
+  color: #ffcc00;
 }
